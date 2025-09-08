@@ -5,7 +5,14 @@
 @endsection
 
 @section('body')
-  
+  <style>
+    .faq-section .accordion .accordion-item .accordion-header .accordion-button {
+    color: var(--bs-white);
+    background: #93bf34 ;
+    font-size: 18px;
+}
+
+  </style>
 
      <!-- Header Start -->
      <div class="container-fluid bg-breadcrumb">
