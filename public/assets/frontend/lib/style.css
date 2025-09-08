@@ -175,7 +175,7 @@
 
 .faq-section .accordion .accordion-item .accordion-header .accordion-button {
     color: var(--bs-white);
-    background: rgba(246, 138, 10, .9);
+    background: #93bf34 ;
     font-size: 18px;
 }
 

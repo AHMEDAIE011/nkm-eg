@@ -26,44 +26,30 @@
                         <div class="row g-5">
                             <div class="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
                                 <div class="h-100">
-                                    <h4 class="text-primary">About Us</h4>
-                                    <h1 class="display-4 mb-4">Providing you with the highest quality of features</h1>
-                                    <div class="row g-4 mb-4">
-                                        <div class="col-md-6">
-                                            <a href="#" class="d-flex">
-                                                <span class="fas fa-bolt fa-3x me-3"></span>
-                                                <h4 class="mb-0">Emergency Power Solution</h4>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <a href="#" class="d-flex">
-                                                <span class="fas fa-broadcast-tower fa-3x me-3"></span>
-                                                <h4 class="mb-0">Full-Service Electrical Layout</h4>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minus. At velit nam, animi culpa fugiat neque facere illum, eum possimus omnis accusantium deleniti consectetur temporibus necessitatibus asperiores sunt dicta?
-                                    </p>
+                                    <h4 class="text-primary">About Us – NKM</h4>
+                                    <h1 class="display-4 mb-4">At NKM – New Kitchen Mechanism, we’re more than just a brand… we’re your partner in creating smarter and more elegant spaces.</h1>
+                                    <br>
+                                    <p class="mb-4">🎯 Our mission is to deliver innovative solutions for organizing kitchens and dressing rooms with modern designs and long-lasting quality.</p>
                                     <div class="text-dark mb-4">
-                                        <p class="fs-5"><span class="fa fa-check text-primary me-2"></span> Installed, maintained and repaired lighting for clients.</p>
-                                        <p class="fs-5"><span class="fa fa-check text-primary me-2"></span> Increasingly popular way to generate electricity.</p>
-                                        <p class="fs-5"><span class="fa fa-check text-primary me-2"></span> Protect electrical devices from damage.</p>
+                                        <p class="fs-5"> 🔹 Our products are not only practical but also add a touch of luxury to every detail of your home.</p>
+                                        <p class="fs-5"> 🔹 We offer premium materials, smart ideas, and a 5-year warranty to ensure your peace of mind</p>
+                                        <p class="fs-5"> 🔹 Our vision is that every home deserves to be organized, stylish, and modern</p>
                                     </div>
-                                    <a class="btn btn-primary py-3 px-4 px-md-5 ms-2" href="#">Contact us</a>
+                                    <p class="fs-3"> With NKM, you’ll discover how small details can make the biggest difference. ✨</p>
                                 </div>
                             </div>
                             <div class="col-lg-5 wow fadeInRight" data-wow-delay="0.2s">
                                 <div class="position-relative h-100">
-                                    <img src="{{asset('assets/frontend')}}/img/img/about-1.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="">
+                                    <img src="{{asset('uploads/posts/postSeeder/0deb0f78-9fd6-4208-8f3a-204689560c451739635109jpeg.jpeg')}}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="">
                                     <div class="bg-white">
                                         <div class="position-absolute pt-3 bg-white" style="width: 50%; left: 0; bottom: 0;">
                                             <div class="bg-primary p-4">
-                                                <h4 class="display-2 mb-0">25+</h4>
+                                                <h4 class="display-2 mb-0">5+</h4>
                                                 <p class="text-white fs-5 mb-0">years of experience</p>
                                             </div>
                                         </div>
                                         <div class="position-absolute p-3 bg-white pb-0 pe-0" style="width: 50%; bottom: 0; right: 0;">
-                                            <img src="{{asset('assets/frontend')}}/img/img/about-2.jpg" class="img-fluid" alt="">
+                                            <img src="{{asset('uploads/posts/postSeeder/12.jpeg')}}" class="img-fluid" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -83,12 +69,12 @@
                             <div class="col-lg-8">
                                 <div class="">
                                     <h4 class="text-white">Contact With Me</h4>
-                                    <h1 class="display-4 text-white mb-0">We provide professional electric services for our customer</h1>
+                                    <h1 class="display-4 text-white mb-0">Smart Spaces, Modern Living</h1>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="d-flex align-items-center justify-content-lg-end h-100">
-                                    <a class="btn btn-primary py-3 px-4 px-md-5 ms-2" href="#">EXPLORE MORE</a>
+                                    <a class="btn btn-primary py-3 px-4 px-md-5 ms-2" href="{{ route('frontend.conact.index') }}">EXPLORE MORE</a>
                                 </div>
                             </div>
                         </div>
@@ -200,48 +186,60 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingOne">
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Q: How Do I Sing Up For Your Electricity Services?
+                                                    Q: How do I order NKM products?
                                                 </button>
                                             </h2>
                                             <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+                                                    A: You can order directly through our official branches, authorized dealers, or by contacting us on 📞 01060300850.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingTwo">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Q: What Types Of Electricity Plans Do You Offer?
+Q: What types of products does NKM offer?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+                                                <div class="accordion-body">A: NKM provides smart kitchen & wardrobe solutions including storage boxes, tie racks, pull-out baskets, corner units, and more – all designed for modern living.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingThree">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    Q: What Are Your Billing And Payment Options?
+                                                    Q: What warranty do I get with NKM products?
                                                 </button>
                                             </h2>
                                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+                                                    A: All NKM products come with a 5-year warranty, ensuring high quality and durability.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingFour">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                    Q: How Can I Track My Energy Usage With Your Services?
+                                                    Q: Do you provide installation services?
                                                 </button>
                                             </h2>
                                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
-                                                    A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+                                                    A: Yes, NKM offers professional installation to make sure every detail is perfectly fitted in your kitchen or wardrobe.
+                                                </div>
+                                            </div>
+                                        </div>
+                                          <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFive">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                    Q: How can I get support or after-sales service?
+
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    A: Simply contact our support team via phone or visit our showroom in Damietta – El Zarqa Center – in front of El Zahraa Hospital.
                                                 </div>
                                             </div>
                                         </div>
@@ -253,90 +251,6 @@
                  </div>
                 <!-- FAQ End -->
         
-        
-                <!-- Team Start -->
-                 <div class="container-fluid team py-5">
-                    <div class="container py-5">
-                        <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                            <h4 class="text-primary">Our Team</h4>
-                            <h1 class="display-4 mb-4">Electricity Service offerings</h1>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, deserunt provident ab voluptates rerum eaque eum magni autem atque in minus laboriosam corrupti deleniti voluptatibus rem reiciendis modi veniam animi?
-                            </p>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="team-item">
-                                    <div class="team-img">
-                                        <img src="{{asset('assets/frontend')}}/img/img/team-1.jpg" class="img-fluid w-100" alt="">
-                                        <div class="team-icon">
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team-content bg-light text-center p-4">
-                                        <h4>Shoaib Bashir</h4>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="team-item">
-                                    <div class="team-img">
-                                        <img src="{{asset('assets/frontend')}}/img/img/team-2.jpg" class="img-fluid w-100" alt="">
-                                        <div class="team-icon">
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team-content bg-light text-center p-4">
-                                        <h4>Shoaib Bashir</h4>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="team-item">
-                                    <div class="team-img">
-                                        <img src="{{asset('assets/frontend')}}/img/img/team-3.jpg" class="img-fluid w-100" alt="">
-                                        <div class="team-icon">
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team-content bg-light text-center p-4">
-                                        <h4>Shoaib Bashir</h4>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
-                                <div class="team-item">
-                                    <div class="team-img">
-                                        <img src="{{asset('assets/frontend')}}/img/img/team-4.jpg" class="img-fluid w-100" alt="">
-                                        <div class="team-icon">
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary mb-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="team-content bg-light text-center p-4">
-                                        <h4>Shoaib Bashir</h4>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-                <!-- Team End -->
-
 
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
