@@ -8,10 +8,6 @@
 @push('header')
 <link rel="canonical" href="{{ url()->full() }}" />
 @endpush
-@section('breadcrumb')
-    @parent
-    <li class="breadcrumb-item"><a href="{{ route('frontend.index') }}">Home test</a></li>
-@endsection
 @section('body')
 
 <style>

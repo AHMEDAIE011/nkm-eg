@@ -17,8 +17,8 @@ class ImageFactory extends Factory
     public function definition(): array
     {
         $paths = [
-            'uploads/posts/1.jpeg', 'uploads/posts/2.jpeg','uploads/posts/3.jpeg' , 'uploads/posts/4.jpeg' , 'uploads/posts/5.jpeg',
-            'uploads/posts/6.jpeg','uploads/posts/7.jpeg','uploads/posts/8.jpeg',
+            'uploads/posts/postSeeder/1.jpg', 'uploads/posts/postSeeder/2.jpg','uploads/posts/postSeeder/3.jpg' , 'uploads/posts/postSeeder/4.jpg' , 'uploads/posts/postSeeder/5.jpg',
+            'uploads/posts/postSeeder/6.jpg','uploads/posts/postSeeder/7.jpg','uploads/posts/postSeeder/8.jpg',
 
     ];
         return [
