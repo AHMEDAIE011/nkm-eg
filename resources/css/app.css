@@ -1,0 +1,189 @@
+
+
+.special-heading-div{
+    margin:20px 0 100px 0;
+}
+  .special-heading{
+        color: #ebeced;
+        font-weight: 800;
+        text-align: center;
+        font-size: 100px;
+        letter-spacing: -3px;
+        margin: 0;
+    }
+
+.special-heading + p{
+text-align: center;
+margin: -39px;
+color: #777;
+font-size: 24px;
+}
+@media (max-width:767px){
+.special-heading{
+    font-size: 70px;
+}
+.special-heading + p{
+    margin-top: -25px;
+}
+}
+
+
+
+/* :start About */
+.about{
+    padding-bottom: 80px;
+    }
+    .about .about-content{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 130px;
+        justify-content:space-between;
+    }
+    @media(max-width: 991px){
+    .about .about-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    }
+    .about .about-content .image{
+    width: 250px;
+    height: 375px;
+    position: relative;
+    }
+    @media(max-width: 991px){
+    .about .about-content .image{
+        margin: 0 auto -90px;
+    }
+
+    }
+    .about .about-content .image::before {
+    content: "";
+    position: absolute ;
+    width: 78px;
+    height: calc(100% + 15px);
+    top: -50px;
+    background-color: rgb(153, 154, 168);
+    z-index: -1;
+    left: -20px;
+    }
+    .about .about-content .image::after{
+        content: "";
+        position:absolute ;
+        width: 165px;
+        height: 275px;
+        border-left: 50px solid #1E3A5F;
+        border-bottom: 50px solid #1E3A5F;
+        z-index: -1;
+        right: -150px;
+        top: -50px;
+    }
+    @media(max-width: 991px){
+    .about .about-content .image::before,
+    .about .about-content .image::after{
+        display: none;
+    }
+    }
+    .about .about-content .image img{
+        max-width: calc(100% + 25px) ;
+    }
+    .about .about-content .text{
+            direction: rtl;
+
+        flex-basis: calc(100% - 500px);
+    }
+    .about .about-content .text p:first-of-type{
+        font-weight: bold;
+        line-height: 2;
+        margin-bottom: 50px;
+    }
+    .about .about-content .text hr{
+        width: 50%;
+        margin: 0;
+        height: 4px;
+        background-color: #1E3A5F;
+    }
+    @media(max-width: 991px){
+    .about .about-content .text hr{
+    margin-left: 25%;
+    }
+    }
+
+    .about .about-content .text p:last-of-type{
+    color: #777;
+    line-height: 2;
+    }
+    
+    
+    
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+    
+        .product-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease-in-out forwards;
+            display: none; /* إخفاء جميع المنتجات */
+            height: 240px;
+    
+        }
+    
+        .product-card.visible {
+            display: block;
+        }
+    
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+    
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+        }
+    
+        .btn-more {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            text-align: center;
+        }
+    
+        @media(min-width: 1500px){
+            .about .about-content .text hr{
+            margin-left: 25%;
+            }.product-card {
+               
+                height: 340px;
+                margin-bottom: 10px;
+    
+            }
+            }
+            @media(max-width: 770px){
+                .product-card {
+                    height: auto;
+                    margin-bottom: 10px;
+        
+                }
+                }
+    
+
+    
