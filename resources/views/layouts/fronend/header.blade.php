@@ -41,9 +41,9 @@
               </div>
               <div class="col-lg-6 col-md-4">
                 <div class="b-ads">
-                  <a href="https://htmlcodex.com">
+                  {{-- <a href="">
                     <img style="" src="{{asset('assets/frontend')}}/img/hidder-pro.webp" alt="Ads" />
-                  </a>
+                  </a> --}}
                 </div>
               </div>
               <div class="col-lg-3 col-md-4">

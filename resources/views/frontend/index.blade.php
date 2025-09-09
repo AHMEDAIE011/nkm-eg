@@ -48,11 +48,11 @@
 }
 @media (min-width: 1800px) {
     .top-news .tn-img-slid img {
-        height: 683px;
+        height: 783px;
         width: 890px;
     }
         .top-news .tn-img-4 img {
-        height: 340px;
+        height: 390px;
         width: 460px;
     }
     
@@ -148,7 +148,7 @@
                        @foreach ($category->posts as $post)
                         <div class="col-md-6">
                             <div class="cn-img">
-                                <img style="height: 440px;width:445px" src="{{ asset($post->images->first()->path) ?? '' }}" />
+                                <img  src="{{ asset($post->images->first()->path) ?? '' }}" />
                                 <div class="cn-title">
                                     @if (App::getLocale() == 'ar')
                                     <a href="{{ route('frontend.post.show' , $post->slug) }}">{{ $post->title_ar }}</a>
@@ -285,7 +285,7 @@
                         @foreach ($posts as $post)
                             <div class="col-md-4 d-flex justify-content-center">
                                 <div class="mn-img">
-                                  <img style="height: 295px;width:460px" src="{{ asset($post->images->first()->path) ?? '' }}" />
+                                  <img  src="{{ asset($post->images->first()->path) ?? '' }}" />
                                     <div class="mn-title">
                                         @if (App::getLocale() == 'ar')
                                         <a href="{{ route('frontend.post.show' , $post->slug) }}">{{ $post->title_ar }}</a>
