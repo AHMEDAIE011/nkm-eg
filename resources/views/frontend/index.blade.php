@@ -11,10 +11,51 @@
 @section('body')
 
 <style>
-
-.top-news .tn-img img{
+.top-news .tn-img img{object-fit: fill;}
+@media (min-width: 1300px) {
+    .top-news .tn-img-slid img {
+        height: 683px;
+        width: 620px;
+    }
+        .top-news .tn-img-4 img {
+        height: 340px;
+        width: 320px;
+    }
     
-object-fit: fill;
+}
+
+@media (min-width: 1400px) {
+     .top-news .tn-img-slid img {
+        height: 683px;
+        width: 720px;
+    }
+        .top-news .tn-img-4 img {
+        height: 340px;
+        width: 360px;
+    }
+    
+}
+@media (min-width: 1600px) {
+     .top-news .tn-img-slid img {
+        height: 683px;
+        width: 800px;
+    }
+        .top-news .tn-img-4 img {
+        height: 340px;
+        width: 390px;
+    }
+    
+}
+@media (min-width: 1800px) {
+    .top-news .tn-img-slid img {
+        height: 683px;
+        width: 890px;
+    }
+        .top-news .tn-img-4 img {
+        height: 340px;
+        width: 460px;
+    }
+    
 }
 
 </style>

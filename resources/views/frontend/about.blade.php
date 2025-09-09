@@ -11,17 +11,33 @@
     background: #93bf34 ;
     font-size: 18px;
 }
-
+.banner::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    top: -200px;
+    left: 0;
+    background: #93bf34;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+.btn:hover
+ {
+    color: var(--bs-btn-hover-color);
+    background-color:#93bf34;
+    border-color: var(--bs-btn-hover-border-color);
+}
   </style>
 
      <!-- Header Start -->
-     <div class="container-fluid bg-breadcrumb">
+     <div class="container-fluid bg-breadcrumb banner">
         <div class="container text-center py-5" style="max-width: 900px;">
             <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
             <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-primary">About</li>
+                <li class="breadcrumb-item active" style="    color: #93bf34;">About</li>
             </ol>    
         </div>
     </div>
@@ -33,14 +49,15 @@
                         <div class="row g-5">
                             <div class="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
                                 <div class="h-100">
-                                    <h4 class="text-primary">About Us – NKM</h4>
-                                    <h1 class="display-4 mb-4">At NKM – New Kitchen Mechanism, we’re more than just a brand… we’re your partner in creating smarter and more elegant spaces.</h1>
+                                    <h4 style="    color: #93bf34;">About Us – NKM</h4>
+        
+                                    <h1 class="display-4 mb-4">At NKM – New Kitchen Mechanism, we’re more than just a brand… <br>we’re your partner in creating smarter and more elegant spaces.</h1>
                                     <br>
-                                    <p class="mb-4">🎯 Our mission is to deliver innovative solutions for organizing kitchens and dressing rooms with modern designs and long-lasting quality.</p>
+                                    <p class="mb-4"> Our mission is to deliver innovative solutions for organizing kitchens and dressing rooms with modern designs and long-lasting quality.</p>
                                     <div class="text-dark mb-4">
-                                        <p class="fs-5"> 🔹 Our products are not only practical but also add a touch of luxury to every detail of your home.</p>
-                                        <p class="fs-5"> 🔹 We offer premium materials, smart ideas, and a 5-year warranty to ensure your peace of mind</p>
-                                        <p class="fs-5"> 🔹 Our vision is that every home deserves to be organized, stylish, and modern</p>
+                                        <p class="fs-5"> <span class="fa fa-check text-primary me-2"></span>  Our products are not only practical but also add a touch of luxury to every detail of your home.</p>
+                                        <p class="fs-5"> <span class="fa fa-check text-primary me-2"></span>  We offer premium materials, smart ideas, and a 5-year warranty to ensure your peace of mind</p>
+                                        <p class="fs-5"> <span class="fa fa-check text-primary me-2"></span>  Our vision is that every home deserves to be organized, stylish, and modern</p>
                                     </div>
                                     <p class="fs-3"> With NKM, you’ll discover how small details can make the biggest difference. ✨</p>
                                 </div>
@@ -50,8 +67,8 @@
                                     <img src="{{asset('uploads/posts/postSeeder/0deb0f78-9fd6-4208-8f3a-204689560c451739635109jpeg.jpeg')}}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="">
                                     <div class="bg-white">
                                         <div class="position-absolute pt-3 bg-white" style="width: 50%; left: 0; bottom: 0;">
-                                            <div class="bg-primary p-4">
-                                                <h4 class="display-2 mb-0">5+</h4>
+                                            <div class=" p-4" style="background-color: #1E3A5F;">
+                                                <h4 class="display-2 mb-0">20+</h4>
                                                 <p class="text-white fs-5 mb-0">years of experience</p>
                                             </div>
                                         </div>
@@ -90,7 +107,7 @@
                 <!-- Banner End -->
         
                 <!-- Projects Start -->
-                <div class="container-fluid projects bg-light py-5">
+                {{-- <div class="container-fluid projects bg-light py-5">
                     <div class="container py-5">
                         <div class="row g-5">
                             <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
@@ -172,10 +189,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- Projects End -->
         
-        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
                 <!-- FAQ Start -->
                 <div class="container-fluid faq-section bg-light pb-5">
                     <div class="container pb-5">
