@@ -124,6 +124,8 @@
         <div class="text">
           <p>{{__('home.about text 1')}}</p>
           <hr>
+          <br>
+          <br>
           <p>{{__('home.about text 2')}}</p> 
         </div>
       </div>

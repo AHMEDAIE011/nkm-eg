@@ -18,8 +18,9 @@ return [
     'about'=> 'about',
     'account'=> 'account',
     'allCategory'=> 'All Category',
-    'about text 1'=> 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nesciunt id eos ab, accusantium odit sit totam exercitationem voluptatem laudantium blanditiis eveniet. Saepe quod illum dolores nulla eveniet harum beatae.',
-    'about text 2'=> 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nesciunt id eos ab, accusantium odit sit totam exercitationem voluptatem laudantium blanditiis eveniet. Saepe quod illum dolores nulla eveniet harum beatae.',
+    'about text 1'=> 'At NKM – New Kitchen Mechanism, we’re more than just a brand…
+we’re your partner in creating smarter and more elegant spaces',
+    'about text 2'=> 'With NKM, you’ll discover how small details can make the biggest difference',
     'showMore'=> 'Show More',
     ''=> '',
     ''=> '',
