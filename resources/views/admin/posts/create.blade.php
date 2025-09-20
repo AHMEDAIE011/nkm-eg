@@ -64,6 +64,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
+                            <p>Enter Description EN</p>
                             <textarea id="postContent" name="desc" value="{{ @old('desc') }}" placeholder="Enter Description EN" class="form-control"></textarea>
                             @error('desc')
                                 <strong class="text-danger">{{ $message }}</strong>
@@ -71,7 +72,9 @@
                         </div>
                         
                         <div class="form-group">
-                            <textarea id="postContent" name="desc_ar" value="{{ @old('desc_ar') }}" placeholder="Enter Description AR" class="form-control"></textarea>
+                            <p>Enter Description AR</p>
+
+                            <textarea id="postContentAr" name="desc_ar" value="{{ @old('desc_ar') }}" placeholder="Enter Description AR" class="form-control"></textarea>
                             @error('desc_ar')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
@@ -164,6 +167,8 @@
             });
 
             $('#postContent').summernote({
+                height: 300,
+            }); $('#postContentAr').summernote({
                 height: 300,
             });
         });
