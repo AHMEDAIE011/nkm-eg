@@ -12,11 +12,11 @@ return [
     |
     */
 
-    'home'   => 'home',
-    'products' => 'products',
+    'home'   => 'Home',
+    'products' => 'Products',
     'ContactUs'=> 'ContactUs',
-    'about'=> 'about',
-    'account'=> 'account',
+    'about'=> 'About',
+    'account'=> 'Account',
     'allCategory'=> 'All Category',
     'about text 1'=> 'At NKM – New Kitchen Mechanism, we’re more than just a brand…
 we’re your partner in creating smarter and more elegant spaces',

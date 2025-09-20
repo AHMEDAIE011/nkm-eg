@@ -2,7 +2,7 @@
    <div class="footer">
        <div class="container">
            <div class="row">
-               <div class="col-lg-3 col-md-6">
+               <div class="col-lg-4 col-md-6">
                    <div class="footer-widget">
                        <h3 class="title">Get in Touch</h3>
                        <div class="contact-info">
@@ -24,32 +24,21 @@
                    </div>
                </div>
 
-               <div class="col-lg-3 col-md-6">
-                   <div class="footer-widget">
-                       <h3 class="title">Useful Links</h3>
-                       <ul>
-                           @foreach ($relatedSites as $site)
-                               <li class="d-none"><a href="{{ $site->url }}"
-                                       title="{{ $site->name }}">{{ $site->name }}</a></li>
-                           @endforeach
-                       </ul>
-                   </div>
-               </div>
 
-               <div class="col-lg-3 col-md-6">
+
+               <div class="col-lg-4 col-md-6">
                    <div class="footer-widget">
                        <h3 class="title">Quick Links</h3>
                        <ul>
-                           {{-- <li><a href="#"> Lorem ipsum</a></li>
-                           <li><a href="#"> Pellentesque</a></li>
-                           <li><a href="#"> Aenean vulputate</a></li>
-                           <li><a href="#"> Vestibulum sit amet</a></li>
-                           <li><a href="#"> Nam dignissim</a></li> --}}
+                           <li><a href="{{ route('frontend.index') }}"> {{__('home.home')}}</a></li>
+                           <li><a href="{{ route('frontend.categories.posts') }}"> {{__('home.allCategory')}}</a></li>
+                           <li><a href="{{ route('frontend.conact.index') }}"> {{__('home.ContactUs')}}</a></li>
+                           <li><a href="{{ route('frontend.about') }}"> {{__('home.about')}}</a></li>
                        </ul>
                    </div>
                </div>
 
-               <div class="col-lg-3 col-md-6">
+               <div class="col-lg-4 col-md-12">
                    <div class="footer-widget">
                        <h3 class="title">NKM </h3>
                        <div class="newsletter">

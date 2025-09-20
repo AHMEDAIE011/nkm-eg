@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $posts = Post::active()->active()->with('images')->latest()->paginate(9);
+        $posts = Post::active()->active()->with('images')->latest()->paginate(8);
         $gretest_posts_views = Post::active()->orderBy('num_of_views', 'desc')->limit(3)->get();
         $oldest_news = Post::active()->oldest()->take(3)->get();
 

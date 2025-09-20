@@ -6,7 +6,7 @@
     <!-- Contact Start -->
     <div class="contact">
         <div class="container">
-            <h1>Contact Us</h1><br>
+            <h1 style="    color: #93bf34;">Contact Us</h1><br>
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <div class="contact-form">
@@ -53,10 +53,7 @@
                     <div class="contact-info">
                         <h3>Get in Touch</h3>
                         <p class="mb-4">
-                            The contact form is currently inactive. Get a functional and
-                            working contact form with Ajax & PHP in a few minutes. Just copy
-                            and paste the files, add a little code and you're done.
-
+                           {{ $getSetting->small_desc }}
                         </p>
                         <h4><i class="fa fa-map-marker"></i>{{ $getSetting->street }},{{ $getSetting->city }} ,
                             {{ $getSetting->country }}</h4>

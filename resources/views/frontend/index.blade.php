@@ -285,7 +285,7 @@
                 <div class="col-lg-9">
                     <div class="row">
                         @foreach ($posts as $post)
-                            <div class="col-md-4 d-flex justify-content-center">
+                            <div class="col-md-3 d-flex justify-content-center" style="margin-bottom: 20px">
                                 <div class="mn-img">
                                   <img  src="{{ asset($post->images->first()->path) ?? '' }}" />
                                     <div class="mn-title">
@@ -296,6 +296,7 @@
                                         @endif                                    </div>
                                 </div>
                             </div>
+                            
                         @endforeach
                     {{ $posts->links() }}
                     </div>

@@ -26,7 +26,7 @@
             <div class="col-lg-9">
               <div class="row">
                 @forelse ($posts as $post)
-                    <div class="col-md-4 d-flex justify-content-center">
+                    <div class="col-md-3 d-flex justify-content-center" style="margin-bottom: 20px">
     <div class="mn-img" style="width:100%; height:auto; overflow:hidden; display:flex; align-items:center; justify-content:center;">
         <img src="{{ asset($post->images->first()->path) }}" 
              alt="{{ $post->title }}" 
