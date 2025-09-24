@@ -11,15 +11,15 @@
               <div class="col-md-6">
                   <div class="tb-menu text-right">
                       @guest
-                          <a href="{{ route('register') }}">Register</a>
-                          <a href="{{ route('login') }}">Login</a>
+                          {{-- <a href="{{ route('register') }}">Register</a>
+                          <a href="{{ route('login') }}">Login</a> --}}
                       @endguest
                       @auth
-                          <a href="javascript:void(0)"
-                              onclick="if(confirm('Do you want to logout')){document.getElementById('formLogout').submit()} return false">Logout</a>
-                          <form id="formLogout" action="{{ route('logout') }}" method="post" style="display: none;">
-                              @csrf
-                          </form>
+                          {{-- <a href="javascript:void(0)"
+                              onclick="if(confirm('Do you want to logout')){document.getElementById('formLogout').submit()} return false">Logout</a> --}}
+                          {{-- {{-- <form id="formLogout" action="{{ route('logout') }}" method="post" style="display: none;"> --}} --}}
+                              {{-- @csrf
+                          </form> --}}
                       @endauth
                   </div>
               </div>

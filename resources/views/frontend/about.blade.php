@@ -23,11 +23,25 @@
             transform: rotate(45deg);
             z-index: 1;
         }
+        .banner::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    bottom: -200px;
+    right: 0;
+    background:#1E3A5F;
+    transform: rotate(45deg);
+    z-index: 1;
+        }
 
         .btn:hover {
             color: var(--bs-btn-hover-color);
             background-color: #93bf34;
             border-color: var(--bs-btn-hover-border-color);
+        }
+        .btn {
+            background-color: #134688;
         }
     </style>
 
@@ -36,8 +50,8 @@
         <div class="container text-center py-5" style="max-width: 900px;">
             <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
             <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('frontend.index') }}">Home</a></li>
+                {{-- <li class="breadcrumb-item"><a href="#">Pages</a></li> --}}
                 <li class="breadcrumb-item active" style="    color: #93bf34;">About</li>
             </ol>
         </div>
@@ -52,11 +66,10 @@
                     <div class="h-100">
                         <h4 style="    color: #7a914a;">About Us – NKM</h4>
 
-                        <h1 class="display-4 mb-4" style="    color: #93bf34;">At NKM – New Kitchen Mechanism, we’re more
+                        <h1 class="display-6 mb-4" style="    color: #93bf34;">At NKM – New Kitchen Mechanism, we’re more
                             than just a brand… <br>we’re your partner in creating smarter and more elegant spaces.</h1>
-                        <br>
-                        <p class="mb-4" style="    color: #3c6292;"> Our mission is to deliver innovative solutions for
-                            organizing kitchens and dressing rooms with modern designs and long-lasting quality.</p>
+                        <h4 class="mb-4" style="    color: #3c6292;"> Our mission is to deliver innovative solutions for
+                            organizing kitchens and dressing rooms with modern designs and long-lasting quality.</h4><br>
                         <div class="text-dark mb-4">
                             <p class="fs-5" style="    color: #1E3A5F;"> <span
                                     class="fa fa-check text-primary me-2"></span> Our products are not only practical but
@@ -68,7 +81,7 @@
                                     class="fa fa-check text-primary me-2"></span> Our vision is that every home deserves to
                                 be organized, stylish, and modern</p>
                         </div>
-                        <p class="fs-3" style="    color: #93bf34;"> With NKM, you’ll discover how small details can make the biggest difference. ✨
+                        <p class="fs-3" style="    color: #93bf34;"> With NKM, you’ll discover how small details can make the biggest difference. 
                         </p>
                     </div>
                 </div>
@@ -207,16 +220,13 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
+
     <!-- FAQ Start -->
     <div class="container-fluid faq-section bg-light pb-5">
         <div class="container pb-5">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                    <h4 class="text-primary">Some Important FAQ's</h4>
-                </div>
                 <div class="col-xl-12 wow fadeInRight" data-wow-delay="0.4s">
+                    <h4 class="text-primary">Some Important FAQ's :</h4>
                     <div class="h-100">
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">

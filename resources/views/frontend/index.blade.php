@@ -116,7 +116,7 @@
 <div class="about" id="about">
     <div class="container">
       <h2 class="special-heading">About</h2>
-      <p>Less is more work</p>
+      {{-- <p>NKM </p> --}}
       <div class="about-content">
         <div class="image">
             <img src="{{ asset('assets/frontend/img/18.jpeg') }}" alt="">
