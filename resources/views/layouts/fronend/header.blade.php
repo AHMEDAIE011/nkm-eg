@@ -93,7 +93,7 @@
 
                       <a href="{{ route('frontend.conact.index') }}" class="nav-item nav-link">{{__('home.ContactUs')}}</a>
                       <a href="{{ route('frontend.about') }}" class="nav-item nav-link"> {{__('home.about')}}</a>
-                      <a href="{{ route('frontend.dashboard.profile') }}" class="nav-item nav-link">{{__('home.account')}}</a>
+                      {{-- <a href="{{ route('frontend.dashboard.profile') }}" class="nav-item nav-link">{{__('home.account')}}</a> --}}
                       <div class="nav-item dropdown">
                         <a href="{{ route('frontend.categories.posts') }}" class="nav-link dropdown-toggle" data-toggle="dropdown">{{App::getLocale()}}</a>
                         <div class="dropdown-menu">

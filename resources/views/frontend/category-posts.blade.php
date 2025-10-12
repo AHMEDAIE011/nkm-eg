@@ -10,9 +10,17 @@
 <div class="imageCategory">
     <img src="{{asset('assets/frontend/img/hidder.webp')}}" class="img-fluid" alt="">
 </div>
-    @parent
-    <li class="breadcrumb-item"><a href="{{ route('frontend.index') }}">Home</a></li>
-    <li class="breadcrumb-item active">{{ $category->name }}</li>
+    @parent  
+    <li class="breadcrumb-item"><a href="{{ route('frontend.index') }}">{{__('home.home')}}</a></li>
+    <li class="breadcrumb-item active">
+      
+        @if (App::getLocale() == 'ar')
+                                              {{ $category->name_ar }}
+
+                            @else
+                                              {{ $category->name }}
+                                                @endif  
+    </li>
 @endsection
 
 @section('body')
@@ -32,9 +40,11 @@
              alt="{{ $post->title }}" 
              style="width:100%; height:100%; object-fit:cover;" />
         <div class="mn-title">
-            <a href="{{ route('frontend.post.show',$post->slug) }}" title="{{ $post->title }}">
-                {{ $post->title }}
-            </a>
+                                                @if (App::getLocale() == 'ar')
+                                                <a class="card-title" href="{{ route('frontend.post.show' , $post->slug) }}">{{ $post->title_ar }}</a>
+                                                @else
+                                                <a class="card-title" href="{{ route('frontend.post.show' , $post->slug) }}">{{ $post->title }}</a>
+                                                @endif  
         </div>
     </div>
 </div>
@@ -53,10 +63,13 @@
 
             <div class="col-lg-3">
               <div class="mn-list">
-                <h2>Other Categories</h2>
+                <h2>{{__('home.allCategories')}}</h2>
                 <ul>
-                    @foreach ($categories as $category )
+                    @foreach ($categories as $category ) @if (App::getLocale() == 'ar')
+                    <li><a href="{{ route('frontend.category.posts' , $category->slug) }}">{{ $category->name_ar }}</a></li>
+                    @else
                     <li><a href="{{ route('frontend.category.posts' , $category->slug) }}">{{ $category->name }}</a></li>
+                    @endif  
                     @endforeach
                 </ul>
               </div>

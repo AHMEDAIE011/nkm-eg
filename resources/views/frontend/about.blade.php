@@ -6,6 +6,16 @@
 
 @section('body')
     <style>
+/* لما الصفحة تكون RTL */
+.accordion-button-ar {
+  justify-content: flex-end; /* يخلي النص يمين */
+}
+
+.accordion-button-ar::after {
+  margin-left: 0 !important;   /* نلغي المسافة الافتراضية */
+  margin-right: auto !important; /* نحرك السهم شمال */
+}
+
         .faq-section .accordion .accordion-item .accordion-header .accordion-button {
             color: var(--bs-white);
             background: #93bf34;
@@ -66,22 +76,17 @@
                     <div class="h-100">
                         <h4 style="    color: #7a914a;">About Us – NKM</h4>
 
-                        <h1 class="display-6 mb-4" style="    color: #93bf34;">At NKM – New Kitchen Mechanism, we’re more
-                            than just a brand… <br>we’re your partner in creating smarter and more elegant spaces.</h1>
-                        <h4 class="mb-4" style="    color: #3c6292;"> Our mission is to deliver innovative solutions for
-                            organizing kitchens and dressing rooms with modern designs and long-lasting quality.</h4><br>
+                        <h1 class="display-6 mb-4" style="    color: #93bf34;">{{__('about.About Us section 1 - 1-1')}} <br>{{__('about.About Us section 1 - 1-2')}}</h1>
+                        <h4 class="mb-4" style="    color: #3c6292;"> {{__('about.About Us section 1 - 2')}}</h4><br>
                         <div class="text-dark mb-4">
                             <p class="fs-5" style="    color: #1E3A5F;"> <span
-                                    class="fa fa-check text-primary me-2"></span> Our products are not only practical but
-                                also add a touch of luxury to every detail of your home.</p>
+                                    class="fa fa-check text-primary me-2"></span> {{__('about.About Us section 1 - 3')}}</p>
                             <p class="fs-5" style="    color: #1E3A5F;"> <span
-                                    class="fa fa-check text-primary me-2"></span> We offer premium materials, smart ideas,
-                                and a 5-year warranty to ensure your peace of mind</p>
+                                    class="fa fa-check text-primary me-2"></span>{{__('about.About Us section 1 - 4')}}</p>
                             <p class="fs-5" style="    color: #1E3A5F;"> <span
-                                    class="fa fa-check text-primary me-2"></span> Our vision is that every home deserves to
-                                be organized, stylish, and modern</p>
+                                    class="fa fa-check text-primary me-2"></span> {{__('about.About Us section 1 - 5')}}</p>
                         </div>
-                        <p class="fs-3" style="    color: #93bf34;"> With NKM, you’ll discover how small details can make the biggest difference. 
+                        <p class="fs-3" style="    color: #93bf34;"> {{__('about.About Us section 1 - 6')}}
                         </p>
                     </div>
                 </div>
@@ -116,14 +121,14 @@
             <div class="row g-5">
                 <div class="col-lg-8">
                     <div class="">
-                        <h4 class="text-white">Contact With Me</h4>
-                        <h1 class="display-4 text-white mb-0">Smart Spaces, Modern Living</h1>
+                        <h4 class="text-white">{{__('about.About Us section 2 - 1')}}</h4>
+                        <h1 class="display-4 text-white mb-0">{{__('about.About Us section 2 - 2')}}</h1>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center justify-content-lg-end h-100">
                         <a class="btn btn-primary py-3 px-4 px-md-5 ms-2"
-                            href="{{ route('frontend.conact.index') }}">EXPLORE MORE</a>
+                            href="{{ route('frontend.conact.index') }}">{{__('about.About Us section 2 - 3')}}</a>
                     </div>
                 </div>
             </div>
@@ -226,21 +231,106 @@
         <div class="container pb-5">
             <div class="row g-5">
                 <div class="col-xl-12 wow fadeInRight" data-wow-delay="0.4s">
-                    <h4 class="text-primary">Some Important FAQ's :</h4>
+ @if (App::getLocale() == 'ar')
+ <h4 class="text-end text-primary">{{__('about.About Us section 3 - 1')}}</h4>
+     
+ @else
+     
+ <h4 class="text-primary">{{__('about.About Us section 3 - 1')}}</h4>
+                    @endif
                     <div class="h-100">
+                        @if (App::getLocale() == 'ar')
+                            
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button accordion-button-ar  text-end" type="button" data-bs-toggle="collapse"
+    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" dir="rtl">
+    {{ __('about.About Us section 3 - 2-1') }}
+</button>
+
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show active"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-end">
+                                        {{__('about.About Us section 3 - 2-2')}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button accordion-button-ar  text-end  collapsed" dir="rtl" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        {{__('about.About Us section 3 - 3-1')}}
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-end">{{__('about.About Us section 3 - 3-2')}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button accordion-button-ar  text-end  collapsed" dir="rtl" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        {{__('about.About Us section 3 - 4-1')}}
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-end">
+                                        {{__('about.About Us section 3 - 4-2')}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button accordion-button-ar  text-end  collapsed" dir="rtl" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        {{__('about.About Us section 3 - 5-1')}}
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-end">
+                                        {{__('about.About Us section 3 - 5-2')}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button accordion-button-ar  text-end  collapsed" dir="rtl" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        {{__('about.About Us section 3 - 6-1')}}
+
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-end">
+                                       {{__('about.About Us section 3 - 6-2')}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @else
+                            
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Q: How do I order NKM products?
+                                        {{__('about.About Us section 3 - 2-1')}}
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show active"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        A: You can order directly through our official branches, authorized dealers, or by
-                                        contacting us on 📞 01060300850.
+                                        {{__('about.About Us section 3 - 2-2')}}
                                     </div>
                                 </div>
                             </div>
@@ -248,14 +338,12 @@
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Q: What types of products does NKM offer?
+                                        {{__('about.About Us section 3 - 3-1')}}
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">A: NKM provides smart kitchen & wardrobe solutions
-                                        including storage boxes, tie racks, pull-out baskets, corner units, and more – all
-                                        designed for modern living.
+                                    <div class="accordion-body">{{__('about.About Us section 3 - 3-2')}}
                                     </div>
                                 </div>
                             </div>
@@ -264,14 +352,13 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Q: What warranty do I get with NKM products?
+                                        {{__('about.About Us section 3 - 4-1')}}
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        A: All NKM products come with a 5-year warranty, ensuring high quality and
-                                        durability.
+                                        {{__('about.About Us section 3 - 4-2')}}
                                     </div>
                                 </div>
                             </div>
@@ -280,14 +367,13 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour" aria-expanded="false"
                                         aria-controls="collapseFour">
-                                        Q: Do you provide installation services?
+                                        {{__('about.About Us section 3 - 5-1')}}
                                     </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        A: Yes, NKM offers professional installation to make sure every detail is perfectly
-                                        fitted in your kitchen or wardrobe.
+                                        {{__('about.About Us section 3 - 5-2')}}
                                     </div>
                                 </div>
                             </div>
@@ -296,19 +382,19 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFive" aria-expanded="false"
                                         aria-controls="collapseFive">
-                                        Q: How can I get support or after-sales service?
+                                        {{__('about.About Us section 3 - 6-1')}}
 
                                     </button>
                                 </h2>
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        A: Simply contact our support team via phone or visit our showroom in Damietta – El
-                                        Zarqa Center – in front of El Zahraa Hospital.
+                                       {{__('about.About Us section 3 - 6-2')}}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>

@@ -43,8 +43,7 @@
                        <h3 class="title">NKM </h3>
                        <div class="newsletter">
                            <p>
-                               Subscribe now to get updates on our latest products and exclusive offers directly to your
-                               inbox.
+                              {{__('home.footer subscribe')}}
 
                            </p>
                            <form action="{{ route('frontend.news.subscrice') }}" method="post">

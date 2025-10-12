@@ -11,8 +11,8 @@ All Categories
     <img src="{{asset('assets/frontend/img/hidder.webp')}}" class="img-fluid" alt="">
 </div>
     @parent
-    <li class="breadcrumb-item"><a href="{{ route('frontend.index') }}">Home</a></li>
-    <li class="breadcrumb-item active">All Categories</li>
+    <li class="breadcrumb-item"><a href="{{ route('frontend.index') }}">{{__('home.home')}}</a></li>
+    <li class="breadcrumb-item active">{{__('home.allCategory')}}</li>
 @endsection
 
 @section('body')
@@ -29,7 +29,13 @@ All Categories
                 <div class="category-container">
                     @foreach ($categories_with_posts as $category)
                         <div class="category mb-5">
-                            <h3 class="category-title">{{ $category->name }}</h3>
+
+                            @if (App::getLocale() == 'ar')
+                                                <h3 class="category-title">{{ $category->name_ar }}</h3>
+
+                            @else
+                                                <h3 class="category-title">{{ $category->name }}</h3>
+                                                @endif  
                             <div class="row">
                                 @foreach ($category->posts as $index => $post)
                                     <div class="col-md-3 d-flex justify-content-center">
@@ -57,7 +63,7 @@ All Categories
             </div>
             <div class="col-lg-3">
                 <div class="mn-list">
-                <h2>Other Categories</h2>
+                <h2>{{__('home.allCategories')}}</h2>
                 <ul>
                     @foreach ($categories as $category )
                     @if (App::getLocale() == 'ar')

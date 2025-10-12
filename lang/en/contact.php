@@ -11,21 +11,15 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
-    'home'   => 'Home',
-    'products' => 'Products',
-    'ContactUs'=> 'ContactUs',
-    'about'=> 'About',
-    'account'=> 'Account',
-    'allCategory'=> 'All Categories',
-    'allCategories'=> ' Other Categories',
-    'about text 1'=> 'At NKM – New Kitchen Mechanism, we’re more than just a brand…
-we’re your partner in creating smarter and more elegant spaces',
-    'about text 2'=> 'With NKM, you’ll discover how small details can make the biggest difference',
-    'showMore'=> 'Show More',
-    'footer subscribe'=> 'Subscribe now to get updates on our latest products and exclusive offers directly to your inbox.',
-    ''=> '',
-    ''=> '',
+'name'=> 'Your Name',
+    'email'=> 'Your Email',
+    'phone'=> 'Your Phone',
+    'subject'=> 'Subject',
+    'message'=> 'Message',
+    'send'=> 'Send Message',
+    'Get in Touch'=> 'Get in Touch',
+    'Get in Touch message'=> 'At NKM – New Kitchen Mechanism, we’re more than just a brand… we’re your partner in creating smarter and more elegant spaces',
+    'Contact Us'=> 'Contact Us',
     ''=> '',
     ''=> '',
     ''=> '',
