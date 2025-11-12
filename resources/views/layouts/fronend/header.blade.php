@@ -50,7 +50,7 @@
                   <form action="{{ route('frontend.search') }}" method="post">
                       @csrf
                       <div class="b-search">
-                          <input name="search" type="text" placeholder="Search" />
+                          <input name="search" type="text" value="{{ $keyword ?? '' }}" placeholder="Search" />
                           <button type="submit"><i class="fa fa-search"></i></button>
                       </div>
                   </form>

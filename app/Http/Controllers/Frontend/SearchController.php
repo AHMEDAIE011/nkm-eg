@@ -16,13 +16,14 @@ class SearchController extends Controller
         ]);
         $keyword = strip_tags($request->search);
 
-        $posts = Post::active()->where('title', 'LIKE', '%'. $keyword. '%')
-            ->orWhere('title_ar', 'LIKE', '%' . $keyword . '%')
-            ->orWhere('desc', 'LIKE', '%' . $keyword . '%')
-            ->paginate(14);
+       $posts = Post::active()
+        ->where('title', 'LIKE', '%' . $keyword . '%')
+        ->orWhere('title_ar', 'LIKE', '%' . $keyword . '%')
+        ->orWhere('desc', 'LIKE', '%' . $keyword . '%')
+        ->paginate(12)
+        ->appends(['search' => $request->search]); // يضيف الكلمة في لينك الصفحات
 
-        return view('frontend.search' , compact('posts'));
-
+    return view('frontend.search', compact('posts', 'keyword'));
     }
 }
 
