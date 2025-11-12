@@ -11,7 +11,14 @@
 @section('breadcrumb')
     @parent
     <li class="breadcrumb-item "><a href="{{ route('frontend.index') }}">Home</a></li>
-    <li class="breadcrumb-item active">{{ $mainPost->title }}</li>
+      @if (App::getLocale() == 'ar')
+                    
+                    <li class="breadcrumb-item active">{{ $mainPost->title_ar }}</li>
+
+                    @else
+                    
+                    <li class="breadcrumb-item active">{{ $mainPost->title }}</li>
+                    @endif
 @endsection
 
 
@@ -55,7 +62,15 @@
                                     <img src="{{ asset($image->path) }}" class="d-block w-100 img-fluid carousel-img"
                                         alt="Slide {{ $index + 1 }}">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>{{ $mainPost->title }}</h5>
+                                              @if (App::getLocale() == 'ar')
+                    
+                    <h5>{{ $mainPost->title_ar }}</h5>
+
+
+                    @else
+                    
+                    <h5>{{ $mainPost->title }}</h5>
+                    @endif
                                         <p></p>
                                     </div>
                                 </div>
@@ -73,10 +88,25 @@
                         </a>
                     </div>
                     <div class="alert alert-info">
-                        Sub Descrption : {{ $mainPost->small_desc }}
+                              @if (App::getLocale() == 'ar')
+                    
+                    Sub Descrption : {{ $mainPost->small_desc_ar }}
+
+                    @else
+                    
+                    Sub Descrption : {{ $mainPost->small_desc }}
+                    @endif
                     </div>
                     <div class="sn-content">
-                        {!! $mainPost->desc !!}
+                        
+                              @if (App::getLocale() == 'ar')
+                    
+                    {!! $mainPost->desc_ar !!}
+
+                    @else
+                    
+                    {!! $mainPost->desc !!}
+                    @endif
                     </div>
 
                     @auth
@@ -140,8 +170,14 @@
                                             src="{{ asset(asset($post->images->first()->path)) }}" class="img-fluid"
                                             alt="{{ $post->title }}" />
                                         <div class="sn-title">
-                                            <a
-                                                href="{{ route('frontend.post.show', $post->slug) }}">{{ $post->title }}</a>
+                                            
+                              @if (App::getLocale() == 'ar')
+                    
+                              <a href="{{ route('frontend.post.show', $post->slug) }}">{{ $post->title_ar }}</a>
+                    @else
+                              <a href="{{ route('frontend.post.show', $post->slug) }}">{{ $post->title }}</a>
+                    
+                    @endif
                                         </div>
                                     </div>
                                 </div>
@@ -166,10 +202,14 @@
                                         <div class="nl-img">
                                             <img src="{{ asset(asset($post->images->first()->path)) }}" />
                                         </div>
-                                        <div class="nl-title">
-                                            <a
-                                                href="{{ route('frontend.post.show', $post->slug) }}">{{ $post->title }}</a>
-                                        </div>
+                                        <div class="nl-title">              
+                              @if (App::getLocale() == 'ar')
+                    
+                              <a href="{{ route('frontend.post.show', $post->slug) }}">{{ $post->title_ar }}</a>
+                    @else
+                              <a href="{{ route('frontend.post.show', $post->slug) }}">{{ $post->title }}</a>
+                    
+                    @endif</div>
                                     </div>
                                 @endforeach
 
@@ -186,6 +226,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="pill" href="#popular">Popular</a>
                                     </li>
+
                                 </ul>
 
                                 <div class="tab-content">
@@ -195,10 +236,16 @@
                                                 <div class="tn-img">
                                                     <img src="{{ asset(asset($post->images->first()->path)) }}" />
                                                 </div>
-                                                <div class="tn-title">
-                                                    <a
-                                                        href="{{ route('frontend.post.show', $post->slug) }}">{{ $post->title }}</a>
-                                                </div>
+                                                <div class="tn-title">    &nbsp;&nbsp;&nbsp;           
+                              @if (App::getLocale() == 'ar')
+                    
+                              <a 
+                              href="{{ route('frontend.post.show', $post->slug) }}"> {{ $post->title_ar }}</a>
+                    @else
+                              <a 
+                              href="{{ route('frontend.post.show', $post->slug) }}"> {{ $post->title }}</a>
+                    
+                    @endif</div>
                                             </div>
                                         @endforeach
 
@@ -212,9 +259,16 @@
                                                     <img src="{{ asset($post->images->first()->path) }}" />
                                                 </div>
                                                 <div class="tn-title">
-                                                    <a
-                                                        href="{{ route('frontend.post.show', $post->slug) }}">{{ $post->title }}</a>
-                                                </div>
+                                                        &nbsp;&nbsp;&nbsp;           
+                              @if (App::getLocale() == 'ar')
+                    
+                              <a 
+                              href="{{ route('frontend.post.show', $post->slug) }}"> {{ $post->title_ar }}</a>
+                    @else
+                              <a 
+                              href="{{ route('frontend.post.show', $post->slug) }}"> {{ $post->title }}</a>
+                    
+                    @endif</div>
                                             </div>
                                         @endforeach
                                     </div>
@@ -227,9 +281,15 @@
                             <div class="category">
                                 <ul>
                                     @foreach ($categories as $category)
-                                        <li><a
-                                                href="">{{ $category->name }}</a><span>({{ $category->posts->count() }})</span>
-                                        </li>
+                                    
+                              @if (App::getLocale() == 'ar')
+                    
+                    <li><a href="">{{ $category->name_ar }}</a><span>({{ $category->posts->count() }})</span></li>
+
+                    @else
+                    
+                    <li><a href="">{{ $category->name }}</a><span>({{ $category->posts->count() }})</span></li>
+                    @endif
                                     @endforeach
                                 </ul>
                             </div>
@@ -305,7 +365,15 @@
                 </div>
                 <div class="col-md-4">
                     <div class="contact-info">
-                        <h3>Get in Touch</h3>
+
+                              @if (App::getLocale() == 'ar')
+                    
+                    <h3>تواصل معنا</h3>
+
+                    @else
+                    
+                    <h3>Get in Touch</h3>
+                    @endif                        
                         <p class="mb-4">
                             {{ $getSetting->small_desc }}
 

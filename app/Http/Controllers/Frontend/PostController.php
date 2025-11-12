@@ -21,7 +21,7 @@ class PostController extends Controller
         }
         $category = $mainPost->category;
         $posts_belongs_to_category = $category->posts()
-            ->select('id', 'slug', 'title')
+            ->select('id', 'slug', 'title','title_ar')
             ->limit(5)
             ->get();
 

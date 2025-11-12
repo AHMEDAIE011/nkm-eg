@@ -76,7 +76,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <textarea id="postContent" name="desc_ar" placeholder="Enter Description" class="form-control">{!! $post->desc_ar !!}</textarea>
+                            <textarea id="postContent2" name="desc_ar" placeholder="Enter Description" class="form-control">{!! $post->desc_ar !!}</textarea>
                             @error('desc_ar')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
@@ -196,6 +196,9 @@
             });
 
             $('#postContent').summernote({
+                height: 300,
+            });
+             $('#postContent2').summernote({
                 height: 300,
             });
         });

@@ -53,7 +53,7 @@ class CasheServiceProvider extends ServiceProvider
 
         // get data from cache
         $read_more_posts = Post::active()->select('id' ,'title','title_ar' , 'slug')->latest()->limit(10)->get();
-        $latest_posts = Post::with('images')->select('id', 'title', 'slug')->latest()->limit(5)->get();
+        $latest_posts = Post::with('images')->select('id', 'title', 'title_ar', 'slug')->latest()->limit(5)->get();
         $gretest_posts_comments =  Post::withCount('comments')
                 ->orderBy('comments_count', 'desc')
                 ->take(5)
