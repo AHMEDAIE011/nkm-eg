@@ -27,6 +27,8 @@
       rel="stylesheet"
     />
 
+<link rel="shortcut icon" href="{{ asset($getSetting->logo)}}" type="image/x-icon">
+<link rel="icon" href="{{ asset($getSetting->logo)}}" type="image/x-icon">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
       rel="stylesheet"
