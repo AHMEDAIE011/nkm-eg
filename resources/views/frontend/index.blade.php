@@ -90,9 +90,9 @@
                     @php
                         $four_posts = $posts->where('header_pro', 1)->take(4);
                     @endphp
-                    <div class="row">
+                    <div class="row ">
                         @foreach ($four_posts as $post)
-                        <div class="col-md-6">
+                        <div class="col-md-6 d-none d-md-block">
                             <div class="tn-img tn-img-4">
                                 <img style="" src="{{ asset($post->images->first()->path) }}" />
                                 <div class="tn-title">
@@ -279,7 +279,7 @@
     <!-- Tab News Start-->
 
     <!-- Main News Start-->
-    <div class="main-news">
+    <div class="main-news d-none d-md-block">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-9">
